@@ -1,0 +1,552 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.presentacion{
+    width: 100%;
+    height: 400px;
+    background-color: black;
+    background-size: cover;
+    background-image: url(../imagenes/banner.png);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.row-presentacion{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.boton-container{
+    display: flex;
+    flex-direction: column;
+    align-content: space-around;
+}
+
+.boton-turno{
+    margin-top: 100px;
+    text-decoration: none;
+    position: relative;
+    text-align: center;
+    color: white;
+	width: 200px;
+	padding: 10px 30px;
+	background-color: black;
+	border: 0;
+	outline: none;
+    font-family: 'Montserrat', sans-serif;
+	border-radius: 30px;
+    font-size: 25px;
+}
+
+.boton-turno:hover{
+    color: black;
+  background: whitesmoke;
+  transition: all 1s;
+}
+
+
+
+h1{
+    margin-left: 5%;
+    font-size: 25px;
+    color: white;
+    text-align: left;
+    font-family: 'Montserrat', sans-serif;
+    background-size: cover;
+}
+
+p{
+    padding: 5%;
+    color: white;
+    text-align: justify;
+    font-size: 20px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+
+
+.slideshow-container {
+  max-width: 100%;
+  height: 500px;
+  position: relative;
+  margin-top: 2px;
+  margin: auto;
+  border-color: #f2f2f2;
+}
+
+
+.mySlides {
+  display: none;
+}
+
+
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+
+.text {
+  color: #f2f2f2;
+  font-size: 30px;
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.485);
+  font-family: 'Roboto Mono', monospace;
+  overflow: hidden;
+  margin-top: -40px;
+}
+
+
+
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Animacion de Desvaneciso para el slider de imagenes */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+
+header{
+    background-color: black;
+    width: 100%;
+    border-width: 0px;
+    height: 120px;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+}
+
+#llave{
+    color: white;
+    margin-left: 25%;
+}
+#car{
+    color: white;
+    float: left;
+    margin-left: 25%;
+}
+
+i{
+    font-size: 30px;
+}
+
+.logo{
+    height: 100px;
+    float: left;
+    width: 390px;
+    background-color: black;
+}
+
+.titulo{
+    background-color: red;
+    height: 70px;
+    border-radius: 20px 20px 0px 0px;
+}
+
+.container{
+    margin-top: 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    align-content: space-between;
+}
+.container-row{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+
+}
+
+
+
+.cuadro-texto{
+    margin-top: 15px;
+    background-color: black;
+    height: 275px;
+    border-radius: 20px;
+    padding: 0px;
+    width: 400px;
+}
+
+.redes{
+    padding: 5px;
+    position: relative;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.link-redes{
+    margin-top: 5px;
+    text-decoration: none;
+    background-color: white;
+    color: black;
+    border-radius: 12px;
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+    width: 65%;
+    font-size: 35px;
+    position: relative;
+}
+
+#ig:hover{
+    color: white;
+    background-image: linear-gradient(#f54030 , #d6249f);
+    transition: all 1s;
+}
+
+#fb:hover{
+    color: white;
+    background-color: #4267B2;
+    transition: all 1s;
+}
+
+#tw:hover{
+    color: white;
+    background-color: #1DA1F2;
+    transition: all 1s;
+}
+
+#cuadro-mapa{
+    margin-top: 50px;
+    width: 75%;
+    height: 500px;
+}
+
+#titulo-mapa{
+    height: 75px;
+}
+
+#mapa{
+    width: 100%;
+    height: 400px;
+    position: relative;
+    overflow: hidden;
+}
+
+#cuadro-presentacion{
+    width: 40%;
+    margin-top: 50px;
+
+}
+
+#imglogo{
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+.menu{
+    list-style: none;
+    background-color: black;
+    width: 74,5%;
+    float: right;
+    height: 45px;
+    margin-top: 25px;
+    border-radius: 25px;
+    overflow: hidden;
+    padding: 0;
+}
+#inicio{
+    border-radius: 25px 0px 0px 25px;
+}
+
+.menu li a {
+    background-color: rgb(219, 25, 25);
+    color:white;
+    text-decoration:none;
+    display:block;
+    padding: 15px;
+    font-family: 'Roboto Mono', monospace;
+    width: 300px;
+}
+
+
+@media all and (max-width: 1400px){
+    .menu li a {
+        width: 100px;
+      }
+    .carrusel{
+        width: 500px;
+        margin-left: 1px;
+    }
+
+}
+@media all and (max-width: 1200px){
+    #titulo-presentacion{
+        font-size: 20px;
+    }
+    .slideshow-container {
+        height: 300px;
+    }
+    .text{
+        font-size: 20px;
+    }
+    #video{
+        width: 500px;
+    }
+}
+
+
+@media all and (max-width: 900px){
+    #video{
+        height: 400px;
+    }
+}
+@media all and (max-width: 790px){
+    header{
+        height: 200px;
+    }
+    .menu{
+        float: left;
+        margin-left: 30px;
+    }
+    .menu li a {
+      width: 200px;
+    }
+    .slideshow-container {
+        height: 200px;
+    }
+    
+
+}
+@media all and (max-width: 730px){
+    .menu{
+        float: left;
+        margin-left: 70px;
+    }
+    .menu li a {
+      width: 150px;
+    }
+    .slideshow-container {
+        height: 150px;
+    }
+
+}
+@media all and (max-width: 620px){
+    .menu li a {
+        width: 100px;
+      }
+      #flechas{
+        font-size: 30px;
+    }
+    #cuadro-presentacion{
+        height: 300px;
+    }  
+    #llave , #car{
+        font-size: 25px;
+    }
+
+
+    #titulo-presentacion{
+        font-size: 18px;
+    }
+}
+@media all and (max-width:500px){
+    #cuadro-presentacion{
+        width: 75%;
+        height: 150px;
+    }
+
+    #llave , #car{
+        display:none;
+    }
+    
+
+    p{
+        font-size: 14px;
+    }
+    .slideshow-container {
+        height: 110px;
+    }
+
+  
+
+}
+
+@media all and (max-width: 470px){
+    .menu li a {
+        width: 75px;
+      }
+      .logo{
+        width: 300px;
+    }
+    .slideshow-container {
+        height: 80px;
+    }
+}
+@media all and (max-width: 400px){
+    .menu{
+        margin-left: 10px;
+    }
+    i{
+        font-size: 15px;
+    }
+    .text{
+        font-size: 15px;
+    }
+   
+}
+
+nav{
+    width: 100%;
+    margin: auto;
+}
+
+
+.menu li{
+    display: inline-block;
+    text-align: center;
+}
+
+.menu li a:hover {
+    background-color:white;
+    color: black;
+    transition: all 1s;
+}
+
+
+.button{
+    border-radius: 50px;
+    border-color: aliceblue;
+    border-width: 0px;
+    height: 100%;
+    width: 100px;
+    background: none;
+}
+
+.button:hover{
+    background-color: azure;
+    transition: background-color 1.5s;
+}
+
+
+footer{
+    height: 200px;
+    background-color: darkred;
+}
+
+#cuadro-form{
+    height: 500px;
+}
+
+#formulario{
+	position: relative;
+	width: 85%;
+	transition: .5s;
+    color: white;
+    padding: 10px;
+    margin-left: 15px;
+}
+
+.input-field{
+    color: white;
+    margin-top: 1px;
+	width: 100%;
+	padding: 10px 0;
+	margin: 5px 0;
+	border-left: 0;
+	border-top: 0;
+	border-right: 0;
+	border-bottom: 1px solid #999;
+	outline: none;
+	background: transparent;
+    font-size: 20px;
+  }
+
+  .submit-btn{
+    margin-top: 10%;
+    margin-left: 20px;
+    color: white;
+	width: 85%;
+	padding: 10px 30px;
+	cursor: pointer;
+	display: block;
+	background: rgb(199, 7, 7);
+	border: 0;
+	outline: none;
+	border-radius: 30px;
+    font-size: 25px;
+    position: relative;
+}
+
+.submit-btn:hover{
+  color: black;
+  background: whitesmoke;
+  transition: all 1s;
+}
+
+.turno-row{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+
+.input-group span{
+    color: red;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 15px;
+    position: relative;
+    padding: 10px;
+}
+
+.body-turno , .body-contacto{
+    background-image: linear-gradient(rgb(255, 0, 0),rgb(0, 0, 0));
+    background-repeat: no-repeat;
+}

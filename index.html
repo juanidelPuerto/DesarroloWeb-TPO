@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./estilos/style.css">
+    <script src="https://kit.fontawesome.com/dcff53c2c5.js" crossorigin="anonymous"></script>
+    <link rel="icon" type="image/x-icon" href="./imagenes/favicon.png">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+    <title>SuperCars - Inicio</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+            <a href="./index.html"><img id="imglogo" src="./imagenes/logo.JPG" alt=""></a>
+            </div>
+            <ul class="menu">
+                <li><a href="./index.html" id="inicio">Inicio</a></li>
+                <li><a href="./contacto.html">Contacto</a></li>
+                <li><a href="./turno.html">Turno</a></li>           
+            </ul>
+        </nav>
+    </header>
+ 
+    <div class="presentacion">
+      <div class="row-presentacion">
+        <div class="cuadro-texto" id="cuadro-presentacion">
+        <div class="titulo">
+          <br>
+          <h1 id="titulo-presentacion">El mejor taller de autos de Argentina</h1>
+        </div>
+          <p>Más de 20 años cuidando tu auto, ofreciendo un servicio profesional y de la mejor calidad.</p>
+          <i id="llave" class="fa-solid fa-screwdriver-wrench"></i>
+          <i id="car" class="fa-solid fa-car"></i>
+        </div>
+        <div class="boton-container">
+        <a class="boton-turno" href="./turno.html">Solicitar Turno</a>
+        </div>
+    </div>
+    </div>
+    <br>
+
+<div class="slideshow-container">
+    <div class="mySlides fade">
+      <img src="./imagenes/imagen1.JPG" style="width:100%">
+      <div class="text">Trabajamos todo tipo de Autos</div>
+    </div>
+  
+    <div class="mySlides fade">
+      <img src="./imagenes/imagen2.JPG" style="width:100%">
+      <div class="text">Personalización de Interiores</div>
+    </div>
+  
+    <div class="mySlides fade">
+      <img src="./imagenes/imagen3.jpg" style="width:100%">
+      <div class="text">La mejor atención</div>
+      
+    </div>
+  
+  
+    <a class="prev" onclick="plusSlides(-1)"><i id="flechas" class="fa-solid fa-angles-left"></i></a>
+    <a class="next" onclick="plusSlides(1)"><i id="flechas" class="fa-solid fa-angles-right"></i></a>
+  </div>
+  <br>
+    <footer>
+      <div class="ayuda">
+       
+        
+      </div>
+    </footer>
+    <script>
+
+
+        let slideIndex = 1;
+showSlides(slideIndex);
+
+// Next/previous controls
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+// Thumbnail image controls
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  let dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+}
+
+    </script>
+</body>
+</html>
