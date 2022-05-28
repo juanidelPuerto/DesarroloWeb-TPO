@@ -27,26 +27,26 @@
         <br>
         <h1>Complete sus datos</h1>
       </div>
-        <form  id="formulario">
+        <div  id="formulario">
             <div class="input-group">
                 <input type="text" class="input-field" placeholder="Nombre" id="nombre" onkeyup="verificarNombre()">
-                <span id='error-nombre'></span>
+                <span id="error-nombre"></span>
             </div>
             <div class="input-group">
-                <input type="text" id="apellido" class="input-field" placeholder="Apellido">
-                <span id="error-apellido">a</span>
+                <input type="text" id="apellido" class="input-field" placeholder="Apellido" onkeyup="verificarApellido()">
+                <span id="error-apellido"></span>
             </div>
             <div class="input-group">
-                <input type="text" id="mail" class="input-field" placeholder="E-Mail" >
-                <span id="error-email">a</span>
+                <input type="text" id="mail" class="input-field" placeholder="E-Mail" onkeyup=" verificarMail()">
+                <span id="error-email"></span>
             </div>
 
             <div class="input-group">
-                <input type="tel" id="telefono" class="input-field" placeholder="Número de telefono">
-                <span id="error-tel">a</span>
+                <input type="tel" id="telefono" class="input-field" placeholder="Número de telefono" onkeyup="verificarTel()">
+                <span id="error-tel"></span>
             </div>
-    </form>
-    <button class="submit-btn" name="registrar" onclick="verificarFormulario()">Reservar</button>
+        </div>
+    <button class="submit-btn" name="registrar" onclick="enviar()">Enviar</button>
 </div>
 
 <iframe id="video" width="800"  src="https://www.youtube.com/embed/qONckKNrkT8?&autoplay=1&controls=0&&showinfo=0&loop=0&mute=1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"></iframe>
@@ -57,29 +57,114 @@
 
     </footer>
     <script>
-        var nombre = document.getElementById("nombre");
-        var apellido = document.getElementById("apellido").value;
-        var mail = document.getElementById("mail").value;
-        var tel = document.getElementById("tel").value;
-        
+        var mailOK =false;
+        var nombreOK =false;
+        var apellidoOK =false;
+        var telOK =false;
+
+
         var errorNombre = document.getElementById('error-nombre');
         var errorApellido = document.getElementById("error-apellido");
         var errorEmail = document.getElementById("error-email");
         var errorTelefono = document.getElementById("error-tel");
 
-        var mailOK = false;
+        const nombre = document.getElementById('nombre');
+        const apellido = document.getElementById("apellido");
+        const mail = document.getElementById("mail");
+        const tel = document.getElementById("telefono");
+        
+
+        
         function verificarNombre(){
 
-            if(nombre.value.length == 0){
-                console.log("aaaaaaaaa");
+            if(nombre.value === "" || nombre.value == null){
                 errorNombre.innerHTML = "Ingrese su nombre";
+                nombreOK = false;
                 return false;
             }
 
+            if(nombre.value.match(/^[0-9]/)){
+                errorNombre.innerHTML = "No ingrese números";
+                nombreOK = false;
+                return false;
+            }
+            nombreOK = true;
+            errorNombre.innerHTML = ' ';
+            return true;
         }
 
-        function confirmarReserva(){
-            alert("Reserva realizada con éxito!");
+        function verificarApellido(){
+
+            if(apellido.value === "" || apellido.value == null){
+                errorApellido.innerHTML = "Ingrese su apellido";
+                apellidoOK = false;
+                return false;
+            }   
+            if(apellido.value.match(/^[0-9]/)){
+                errorApellido.innerHTML = "No ingrese números";
+                apellidoOK = false;
+                return false;
+            }
+            apellidoOK = true;
+            errorApellido.innerHTML = ' ';
+            return true;
+        }   
+
+
+        function verificarMail(){
+            if(mail.value === "" || mail.value == null){
+                errorEmail.innerHTML = "Ingrese su Email";
+                mailOK = false;
+                return false;
+            }
+            if(!mail.value.match("@") || !mail.value.match(".com")){
+                errorEmail.innerHTML = "Email no tiene @ y .com" ;
+                mailOK = false;
+                return false;
+            }
+            mailOK = true;
+            errorEmail.innerHTML = ' ';
+            return true;
+        }
+
+        function verificarTel(){
+            if(tel.value === "" || tel.value == null){
+                errorTelefono.innerHTML = "Ingrese su teléfono";
+                telOK = false;
+                return false;
+            }
+            if (!tel.value.match(/^[0-9]/)) {
+                errorTelefono.innerHTML = "Solo números";    
+                telOK = false;
+                return false;    
+            }
+            if(tel.value.length > 12){
+                errorTelefono.innerHTML = "El número es muy largo";
+                telOK = false;
+                return false;
+            }
+
+            telOK = true;
+            errorTelefono.innerHTML = ' ';
+            return true;
+        }
+
+        function enviar(){
+
+            if (mailOK && nombreOK && telOK && apellidoOK) {
+                alert("Datos Guardados! Pronto lo contactaremos para darle su turno");
+                nombre.value = "";
+                apellido.value = "";
+                mail.value = "";
+                tel.value = "";
+                mailOK = false;
+                telOK = false;
+                nombreOK = false;
+                apellidoOK = false;
+                return true;
+            }else{
+                alert("Complete correctamente todos los campos");
+            }
 
         }
     </script>
